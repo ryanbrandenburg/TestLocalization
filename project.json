@@ -1,0 +1,111 @@
+{
+    "userSecretsId": "aspnet-Mediagral-e633b118-116e-41c0-8b75-e15c4d557622",
+    
+    "authors": [
+        "Cedalis"
+    ],
+    "description": "Application Intranet de gestion des formations pour médiateur",
+    "version": "1.0.0",
+	"buildOptions": {
+		"emitEntryPoint": true,
+        "preserveCompilationContext": true,
+        "copyToOutput": {
+            "include": [
+                "Areas/**/Views/**",
+                "Views",
+                "wwwroot",
+                "config.json"
+            ]
+            }
+    },
+  "publishOptions": {
+        "include": [
+        "Areas/**/Views/**",
+        "Views",
+        "wwwroot",
+        "config.json"
+        ]
+  },
+  "language": "fr-FR",
+  "dependencies": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+        "type": "build",
+        "version": "1.0.0-preview2-final"
+    },
+    "Microsoft.AspNetCore.Razor.Tools": {
+      "version": "1.0.0-preview2-final",
+      "type": "build"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "version": "1.0.0-preview2-final",
+      "type": "build"
+    },
+    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
+      "version": "1.0.0-preview2-final",
+      "type": "build"
+    },    
+    "Microsoft.NETCore.App": "1.0.0",
+    "Microsoft.EntityFrameworkCore": "1.0.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
+    "Microsoft.AspNetCore.Mvc": "1.0.0",
+    "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
+    "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0",
+    "Microsoft.AspNetCore.Routing": "1.0.0",
+    "Microsoft.AspNetCore.Hosting": "1.0.0",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+    "Microsoft.Extensions.Logging.Console": "1.0.0",
+    "Microsoft.Extensions.Configuration.CommandLine": "1.0.0",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0",
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0",
+    "Npgsql.EntityFrameworkCore.PostgreSQL.Design": "1.0.0",
+    "Newtonsoft.Json": "9.0.1",
+    "JetBrains.Annotations": "10.1.5",
+    "System.Xml.XPath": "4.0.1",
+    "System.Xml.XPath.XDocument": "4.0.1",
+    "System.Linq.Dynamic.Core": "1.0.5",
+    "MailKit": "1.4.0"
+  },
+    "frameworks": {
+        "netcoreapp1.0": {
+        "imports": [
+            "dnxcore50",
+            "portable-net451+win8"
+        ]
+        }
+    },
+  "runtimes": {
+    "debian.8-x64": {}
+  },
+  "tools": {
+    "Microsoft.EntityFrameworkCore.Tools": {
+        "imports": ["portable-net451+win8+dnxcore50"],
+        "version": "1.0.0-preview2-final"
+    },
+    "Microsoft.AspNetCore.Razor.Tools": {
+      "version": "1.0.0-preview2-final",
+      "imports": "portable-net451+win8+dnxcore50"
+    },
+    "Microsoft.Extensions.SecretManager.Tools": {
+      "version": "1.0.0-preview2-final",
+      "imports": "portable-net451+win8+dnxcore50"
+    },
+    "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
+      "version": "1.0.0-preview2-final",
+      "imports": [
+        "portable-net451+win8+dnxcore50",
+        "portable-net451+win8"
+      ]
+    }    
+    },    
+    "scripts": {
+        "prepublish": ["nodejs node_modules/bower/bin/bower install", "nodejs node_modules/gulp/bin/gulp.js copy"]
+    },
+  "tooling": {
+    "defaultNamespace": "Mediagral"
+  }    
+}
