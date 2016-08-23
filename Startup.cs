@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -73,6 +75,16 @@ namespace TestLocalization
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            var supportedCultures = new[] {
+                new CultureInfo("en-US"),
+                new CultureInfo("fr-FR")
+            };
+            app.UseRequestLocalization(new RequestLocalizationOptions{
+                DefaultRequestCulture = new RequestCulture("fr-FR"),
+                SupportedCultures = supportedCultures,
+                SupportedUICultures = supportedCultures
+            });
 
             app.UseStaticFiles();
 //            app.UseIdentity();
