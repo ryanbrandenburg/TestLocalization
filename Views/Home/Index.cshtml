@@ -67,6 +67,9 @@
 
 <div class="row">
     <div class="col-md-3">
+        @foreach(System.Collections.Generic.IEnumerable<Microsoft.Extensions.Localization.LocalizedString> text in TestLocalizer.GetAllStrings(false)){
+            <div>@text</div>
+        }
         <span>@TestLocalizer["Action.Supprimer"]</span>
         <span>@TestLocalizer["Action.Valider"]</span>
     </div>

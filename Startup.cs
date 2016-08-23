@@ -55,14 +55,15 @@ namespace TestLocalization
             .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix);
 
             // Add application services.
-   //         services.AddTransient<IEmailSender, AuthMessageSender>();
+   //         services.AddTransient<IEmailSender, AuthMessageSender>();HtmlLocalizer
    //         services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-     //       loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            loggerFactory
+				.AddConsole(minLevel: Microsoft.Extensions.Logging.LogLevel.Trace);
     //        loggerFactory.AddDebug();
 
             if (env.IsDevelopment())
