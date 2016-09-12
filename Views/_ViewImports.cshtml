@@ -2,9 +2,11 @@
 @using TestLocalization.Models
 @using TestLocalization.Models.AccountViewModels
 @using TestLocalization.Models.ManageViewModels
-@using Microsoft.AspNetCore.Identity
 @using Microsoft.AspNetCore.Mvc.Localization
+
+@using Mediagral
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @inject IHtmlLocalizer<Test> TestLocalizer
+@inject IHtmlLocalizer<CommonLanguage> CommonLocalizer

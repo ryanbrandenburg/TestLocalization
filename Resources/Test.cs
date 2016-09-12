@@ -1,7 +1,7 @@
-namespace TestLocalization
+namespace Mediagral
 {
     public class Test
     {
-        
+
     }
 }

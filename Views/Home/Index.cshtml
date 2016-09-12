@@ -67,10 +67,15 @@
 
 <div class="row">
     <div class="col-md-3">
-        @foreach(System.Collections.Generic.IEnumerable<Microsoft.Extensions.Localization.LocalizedString> text in TestLocalizer.GetAllStrings(false)){
+        <h1>Test</h1>
+        @foreach (Microsoft.Extensions.Localization.LocalizedString text in TestLocalizer.GetAllStrings(false))
+        {
             <div>@text</div>
         }
-        <span>@TestLocalizer["Action.Supprimer"]</span>
-        <span>@TestLocalizer["Action.Valider"]</span>
+        <h1>Common</h1>
+        @foreach (Microsoft.Extensions.Localization.LocalizedString text in CommonLocalizer.GetAllStrings(false))
+        {
+            <div>@text</div>
+        }
     </div>
 </div>
